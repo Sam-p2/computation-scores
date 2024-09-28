@@ -6,8 +6,8 @@ app = Flask(__name__)
 def index():
     result = None
     if request.method == 'POST':
-        # Get input values
         try:
+            # Get input values
             absences = int(request.form['absences'])
             prelim_grade = float(request.form['prelim_grade'])
             quizzes_grade = float(request.form['quizzes_grade'])
