@@ -6,16 +6,12 @@ app = Flask(__name__)
 def index():
     result = None
     if request.method == 'POST':
-        try:
-            # Get input values
-            absences = int(request.form['absences'])
-            prelim_grade = float(request.form['prelim_grade'])
-            quizzes_grade = float(request.form['quizzes_grade'])
-            requirements_grade = float(request.form['requirements_grade'])
-            recitation_grade = float(request.form['recitation_grade'])
-        except ValueError:
-            result = "Invalid input. Please enter valid numbers."
-            return render_template('index.html', result=result)
+        # Get input values
+        absences = int(request.form['absences'])
+        prelim_grade = float(request.form['prelim_grade'])
+        quizzes_grade = float(request.form['quizzes_grade'])
+        requirements_grade = float(request.form['requirements_grade'])
+        recitation_grade = float(request.form['recitation_grade'])
 
         # Logic from the Python script
         if absences >= 4:
@@ -47,3 +43,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
