@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <h1>Grade Calculator</h1>
+    <form method="POST">
+        <label for="absences">Absences:</label>
+        <input type="number" name="absences" required><br>
+        <label for="prelim_grade">Prelim Exam Grade:</label>
+        <input type="number" name="prelim_grade" required><br>
+        <label for="quizzes_grade">Quizzes Grade:</label>
+        <input type="number" name="quizzes_grade" required><br>
+        <label for="requirements_grade">Requirements Grade:</label>
+        <input type="number" name="requirements_grade" required><br>
+        <label for="recitation_grade">Recitation Grade:</label>
+        <input type="number" name="recitation_grade" required><br>
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result %}
+        <h2>Results:</h2>
+        <pre>{{ result }}</pre>
+    {% endif %}
+</body>
+</html>
