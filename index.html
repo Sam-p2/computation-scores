@@ -1,37 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Grade Calculator</h1>
-        <form method="POST" action="/">
-            <label for="absences">Absences:</label>
-            <input type="number" id="absences" name="absences" required min="0"><br>
+<form method="POST" action="/">
+    <label for="absences">Absences:</label>
+    <input type="number" id="absences" name="absences" required min="0"><br>
 
-            <label for="prelim_grade">Prelim Exam Grade:</label>
-            <input type="number" id="prelim_grade" name="prelim_grade" required min="0" max="100" step="0.01"><br>
+    <label for="prelim_grade">Prelim Exam Grade:</label>
+    <input type="number" id="prelim_grade" name="prelim_grade" required min="0" max="100" step="0.01"><br>
 
-            <label for="quizzes_grade">Quizzes Grade:</label>
-            <input type="number" id="quizzes_grade" name="quizzes_grade" required min="0" max="100" step="0.01"><br>
+    <label for="quizzes_grade">Quizzes Grade:</label>
+    <input type="number" id="quizzes_grade" name="quizzes_grade" required min="0" max="100" step="0.01"><br>
 
-            <label for="requirements_grade">Requirements Grade:</label>
-            <input type="number" id="requirements_grade" name="requirements_grade" required min="0" max="100" step="0.01"><br>
+    <label for="requirements_grade">Requirements Grade:</label>
+    <input type="number" id="requirements_grade" name="requirements_grade" required min="0" max="100" step="0.01"><br>
 
-            <label for="recitation_grade">Recitation Grade:</label>
-            <input type="number" id="recitation_grade" name="recitation_grade" required min="0" max="100" step="0.01"><br>
+    <label for="recitation_grade">Recitation Grade:</label>
+    <input type="number" id="recitation_grade" name="recitation_grade" required min="0" max="100" step="0.01"><br>
 
-            <input type="submit" value="Calculate">
-        </form>
+    <input type="submit" value="Calculate">
+</form>
 
-        {% if result %}
-            <h2>Results:</h2>
-            <pre>{{ result }}</pre>
-        {% endif %}
-    </div>
-</body>
-</html>
